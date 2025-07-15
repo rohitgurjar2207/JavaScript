@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code 11</title>
+    <style>
+        #My-button {
+            height: 50px;
+            width: 50px;
+            font-size: 25px;
+            border: none;
+            border-radius: 5px;
+        }
+        .js-odd{
+            background-color: rgb(255, 246, 240);
+        }
+        .js-even{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="greeting"></h3>
+
+    <button id="My-button"onclick="buttonPressed();"></button> 
+    <script>
+        let noOfTimeClicked =localStorage.getItem
+        ('noOfTimeClicked')|| 0;
+        function buttonPressed(){
+            noOfTimeClicked++;
+            localStorage.setItem('noOfTimeClicked',noOfTimeClicked);
+            updateButton();
+        }
+        function updateButton(){
+            let button = document.querySelector('#My-button');
+            if(noOfTimeClicked % 2 ==0){
+                button.classList.remove('js-odd');
+                button.classList.add('js-even');
+            }else {
+                button.classList.remove('js-even');
+                button.classList.add('js-odd');
+            }
+            button.innerText =noOfTimeClicked;
+        }
+        updateButton();
+    </script>
+</body>
+</html>

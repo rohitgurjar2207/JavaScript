@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code 9</title>
+</head>
+<body>
+    <h2 id="greeting"></h2>
+    <script>
+       
+        let date =new Date();
+        //let hours =date.getHours();
+        //let hours =13;
+        let heading =document.querySelector('#greeting');
+
+        if(hours >5 && hours <12){
+            heading.innerText ='Good Morning';
+        }else if (hours >12 && hours <18){
+            heading.innerText ='Good Afternoon';
+        }else{
+            heading.innerText ='Good Night';
+        }
+   
+         
+    </script>
+</body>
+</html>
